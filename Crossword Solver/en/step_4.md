@@ -24,6 +24,6 @@ So when we run a string through Wolfram Alpha, it's doing a `DictionaryLookup`, 
 
 We can evaluate it by using `ReleaseHold`.
 
-![release hold](images/releasehold.png)
+![release hold](images/release hold.png)
 
 You will notice that `ReleaseHold[WolframAlpha["c_t_", "WolframParse"]]` and `DictionaryLookup["c" ~~ _ ~~ "t" ~~ _]` give the exact same output. We will use the `WolframAlpha` code.
