@@ -3,7 +3,7 @@
 Now that you've written code which takes the user input from an `InputField` and uses Wolfram Alpha to look up the pattern in the dictionary, returning a list of possible words, you can start to build an interface.
 
 --- task ---
-Let's use `Column` and `Frame` to put the possible words into a box.
+Let's use `Column` and `Framed` to put the possible words into a box.
 
 You can alter your code from the previous task.
 
@@ -18,13 +18,10 @@ Framed[Column[ReleaseHold[WolframAlpha[x, "WolframParse"]]]]]
 You may have noticed that your `InputField` and your results are two separate outputs. We can fix this by putting both pieces of code inside a `Column`. At the same time, we can add a title, and instructions on how to use the tool.
 
 --- task ---
-Use what you learned about `Column` and `Frame` in the last task to put both of your outputs into a single, framed column.
-
-Add text to explain the instructions, and to lable the `InputField` and the list of words.
-
-Use `Text` and `Style` to customise the look of the text.
-
-You can alter your code from the previous task.
++ Use what you learned about `Column` and `Framed` in the last task to put both of your outputs into a single, framed column.
++ Add text to explain the instructions, and to lable the `InputField` and the list of words.
++ Use `Text` and `Style` to customise the look of the text.
++ You can alter your code from the previous task.
 
 ```
 Framed[Column[{x = "a__le";
