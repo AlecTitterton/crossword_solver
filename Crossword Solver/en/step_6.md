@@ -11,8 +11,7 @@ You can alter your code from the previous task.
 x = "c_t";
 InputField[Dynamic[x], String, ContinuousAction -> True]
 Dynamic[
- Column[ReleaseHold[WolframAlpha[x, "WolframParse"]], 
-  Frame -> True]]
+Framed[Column[ReleaseHold[WolframAlpha[x, "WolframParse"]]]]]
 ```
 ---/task ---
 
@@ -28,15 +27,11 @@ Use `Text` and `Style` to customise the look of the text.
 You can alter your code from the previous task.
 
 ```
-Column[{x = "a__le";
-  Text[Style["Crossword Solver", Large]],
-  Text[Style[
-    "Enter the clue into the box, and see a list of possible answers appear!", Medium]],
-  Text[Style["Use _ to represent a missing letter", Medium ]],
-  "Clue " InputField[Dynamic[x], String, ContinuousAction -> True], 
-  Dynamic[
-   "Possible Answers " Column[
-     ReleaseHold[WolframAlpha[x, "WolframParse"]], Frame -> True]]}, 
- Frame -> True]
+Framed[Column[{x = "a__le";
+Text[Style["Crossword Solver", Large]],
+Text[Style["Enter the clue into the box, and see a list of possible answers appear!", Medium]],
+Text[Style["Use _ to represent a missing letter", Medium ]],
+"Clue " InputField[Dynamic[x], String, ContinuousAction -> True],
+Dynamic["Possible Answers " Framed[Column[ReleaseHold[WolframAlpha[x,"WolframParse"]]]]]}]]
 ```
 ---/task---
